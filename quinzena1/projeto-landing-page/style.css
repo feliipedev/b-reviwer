@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+/*Atributo para rolagem suave (n funcionou)*/
+html {
+  scroll-behavior:smooth;
+}
+
+
 /* -------------------------------- :root ------------------------------------------*/
 :root {
   --cor-padrao-nu: rgb(130, 10, 209);
@@ -12,6 +18,8 @@
   --cor-white: rgb(255, 251, 251);
 
   --cor-black: rgb(0, 0, 0);
+
+  --cor-black-s: rgb(22, 21, 21);
 }
 
 /* ----------------------- Área do header e da nav -------------------------------- */
@@ -23,9 +31,12 @@ header {
 
 header nav {
   width: 100%;
-  height: 70px;
+  height: 4.375rem;
   display: flex;
   align-items: center;
+  position: fixed;
+  background-color: var(--cor-white);
+  border-bottom: 0.4px solid #ebe6e6;
 }
 
 header div img {
@@ -35,22 +46,28 @@ header div img {
   margin-right: 1.4rem;
 }
 /* ----------------------- Config dos botoes do nav ------------------------------ */
+
 .buttons a {
   margin: 10px;
   text-decoration: none;
   color: var(--cor-black);
   font-size: 1.125rem;
+  letter-spacing: 0.7px;
 }
+
 
 /* ------------------------------ Main/Sections -------------------------------------*/
 
-main {
+main article section:first-child {
+  background-image: url(img/inicio.jpg);
+  color: var(--cor-white);
+  height: 30vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-main article section:first-child {
-  background-image: url(img/section3.jpg);
-  opacity: 72%;
-}
 
 main article section h1 {
   font-size: 4rem;
@@ -59,21 +76,57 @@ main article section h1 {
 }
 
 main article section div {
-  font-size: 1.9rem;
+  font-size: 2.7rem;
   margin-left: 4rem;
   margin-right: 4rem;
-  text-align: justify;
+  margin-left: 4rem;
   text-indent: 2rem;
   font-weight: bold;
 }
 
 /* --------------------------- Config de cada sessão ---------------------------------- */
+
 #sobreNos,
 #trabalheConosco,
+#boasvindas,
 #contato {
   padding-top: 2rem;
   padding-bottom: 2rem;
+  
 }
+
+/*margin colocada devido a position: fixed do nav*/
+#boasvindas{
+  margin-top: 4rem;
+  
+}
+
+#boasvindas h1,
+#boasvindas h2 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+#sobreNos,
+#trabalheConosco,
+#boasvindas{
+  border-bottom: 0.4px solid #ebe6e6;
+}
+
+#boasvindas h1{
+  font-size: 2.5rem;
+  color: var(--cor-white);
+  margin-left: 6rem;
+  text-indent: 0;
+}
+
+#boasvindas h2{
+  font-size: 2rem;
+  margin-left: 6rem;
+  text-indent: 0;
+  margin-bottom: 1rem;
+}
+
 
 #trabalheConosco img {
   width: 450px;
@@ -83,9 +136,163 @@ main article section div {
 
 #trabalheConosco div {
   display: flex;
-  margin-right: ;
 }
 
 #trabalheConosco p {
   margin-right: 2rem;
+}
+
+#sobreNos{
+  background-image: url(img/section3.jpg);
+}
+
+
+/* --------------------------- Config sessão contatos ---------------------------------- */
+
+#contato {
+  padding-top: 0;
+}
+
+#contato .headerContato{
+  background-color: var(--cor-padrao-nu);
+  margin: 0;
+}
+
+#contato .headerContato h1 {
+  color: var(--cor-white);
+  font-size: 2rem;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+
+}
+
+.meiosContato {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #272424;
+}
+
+#contato .meiosContato .campo h1,
+#contato .meiosContato .campo  {
+  color: var(--cor-black);
+  text-indent: 0;
+  margin-left: 0;
+}
+
+#contato .meiosContato .campo h1 {
+  font-size: 2rem;
+}
+
+#contato .meiosContato .campo p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+}
+
+#contato .meiosContato .campo a {
+  font-size: 1.2rem;
+}
+
+/* --------------------------- Footer---------------------------------- */
+
+footer {
+  display: flex;
+  background-color: var(--cor-black-s);
+  padding-top: 0;
+  margin-top: 0;
+  height: 25vh;
+  align-items: center;
+}
+
+svg{
+  width: 60px;
+  height: 50px;
+  margin-left: 4rem;
+  margin-right: 3rem; 
+  fill: var(--cor-white); 
+}
+
+footer p{
+  color: var(--cor-white);
+  font-weight: bold;
+}
+
+
+
+@media (max-width:1100px){
+  #trabalheConosco div{
+    flex-direction: column;
+    justify-content: center;
+  }
+  #trabalheConosco div img {
+    width: 60vw;
+   margin: auto;
+  }
+}
+
+@media (max-width:950px) {
+  .meiosContato{
+    flex-direction: column;
+  }
+
+  .meiosContato .campo{
+    padding-top: 1rem;
+  }
+
+  footer{
+    flex-direction: column;
+    justify-content: center;
+    height: 20vh;
+  }
+}
+
+@media (max-width:550px) {
+  #trabalheConosco div img {
+   display: none;
+  }
+
+  main article section h1{
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+  }
+
+  header nav{
+    display: flex;
+    flex-direction: column;
+    height: 5.5rem ;
+  }
+
+  #boasvindas{
+    margin-top: 5.5rem ;
+    height: 20rem;
+  }
+  #boasvindas h1 {
+font-size: 1.8rem;
+  }
+  #boasvindas h2 {
+    font-size: 1.2rem;
+  }
+
+  main article section div {
+    font-size: 1.8rem;
+  }
+
+  main article section h1 {
+    font-size: 3rem;
+    
+  }
+
+  @media (max-width:455px){
+    header nav  {
+      font-size: 1px;
+      text-align: center;
+    }
+    
+  }
+
 }
