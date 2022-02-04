@@ -7,9 +7,8 @@
 
 /*Atributo para rolagem suave (n funcionou)*/
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
-
 
 /* -------------------------------- :root ------------------------------------------*/
 :root {
@@ -55,7 +54,6 @@ header div img {
   letter-spacing: 0.7px;
 }
 
-
 /* ------------------------------ Main/Sections -------------------------------------*/
 
 main article section:first-child {
@@ -67,7 +65,6 @@ main article section:first-child {
   flex-direction: column;
   justify-content: center;
 }
-
 
 main article section h1 {
   font-size: 4rem;
@@ -92,13 +89,11 @@ main article section div {
 #contato {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  
 }
 
 /*margin colocada devido a position: fixed do nav*/
-#boasvindas{
+#boasvindas {
   margin-top: 4rem;
-  
 }
 
 #boasvindas h1,
@@ -109,24 +104,23 @@ main article section div {
 
 #sobreNos,
 #trabalheConosco,
-#boasvindas{
+#boasvindas {
   border-bottom: 0.4px solid #ebe6e6;
 }
 
-#boasvindas h1{
+#boasvindas h1 {
   font-size: 2.5rem;
   color: var(--cor-white);
   margin-left: 6rem;
   text-indent: 0;
 }
 
-#boasvindas h2{
+#boasvindas h2 {
   font-size: 2rem;
   margin-left: 6rem;
   text-indent: 0;
   margin-bottom: 1rem;
 }
-
 
 #trabalheConosco img {
   width: 450px;
@@ -142,10 +136,9 @@ main article section div {
   margin-right: 2rem;
 }
 
-#sobreNos{
+#sobreNos {
   background-image: url(img/section3.jpg);
 }
-
 
 /* --------------------------- Config sessão contatos ---------------------------------- */
 
@@ -153,7 +146,7 @@ main article section div {
   padding-top: 0;
 }
 
-#contato .headerContato{
+#contato .headerContato {
   background-color: var(--cor-padrao-nu);
   margin: 0;
 }
@@ -164,7 +157,6 @@ main article section div {
   height: 30vh;
   display: flex;
   align-items: center;
-
 }
 
 .meiosContato {
@@ -176,7 +168,7 @@ main article section div {
 }
 
 #contato .meiosContato .campo h1,
-#contato .meiosContato .campo  {
+#contato .meiosContato .campo {
   color: var(--cor-black);
   text-indent: 0;
   margin-left: 0;
@@ -207,72 +199,71 @@ footer {
   align-items: center;
 }
 
-svg{
+svg {
   width: 60px;
   height: 50px;
   margin-left: 4rem;
-  margin-right: 3rem; 
-  fill: var(--cor-white); 
+  margin-right: 3rem;
+  fill: var(--cor-white);
 }
 
-footer p{
+footer p {
   color: var(--cor-white);
   font-weight: bold;
 }
 
+/* --------------------------- @media---------------------------------- */
 
-
-@media (max-width:1100px){
-  #trabalheConosco div{
+@media (max-width: 1100px) {
+  #trabalheConosco div {
     flex-direction: column;
     justify-content: center;
   }
   #trabalheConosco div img {
     width: 60vw;
-   margin: auto;
+    margin: auto;
   }
 }
 
-@media (max-width:950px) {
-  .meiosContato{
+@media (max-width: 950px) {
+  .meiosContato {
     flex-direction: column;
   }
 
-  .meiosContato .campo{
+  .meiosContato .campo {
     padding-top: 1rem;
   }
 
-  footer{
+  footer {
     flex-direction: column;
     justify-content: center;
     height: 20vh;
   }
 }
 
-@media (max-width:550px) {
+@media (max-width: 550px) {
   #trabalheConosco div img {
-   display: none;
+    display: none;
   }
 
-  main article section h1{
+  main article section h1 {
     text-align: center;
     margin-left: 1rem;
     margin-right: 1rem;
-    
   }
 
-  header nav{
+  header nav {
     display: flex;
     flex-direction: column;
-    height: 5.5rem ;
+    height: 5.5rem;
   }
 
-  #boasvindas{
-    margin-top: 5.5rem ;
+  #boasvindas {
+    margin-top: 5.5rem;
     height: 20rem;
   }
   #boasvindas h1 {
-font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   #boasvindas h2 {
     font-size: 1.2rem;
@@ -284,15 +275,12 @@ font-size: 1.8rem;
 
   main article section h1 {
     font-size: 3rem;
-    
   }
 
-  @media (max-width:455px){
-    header nav  {
+  @media (max-width: 455px) {
+    header nav {
       font-size: 1px;
       text-align: center;
     }
-    
   }
-
 }
