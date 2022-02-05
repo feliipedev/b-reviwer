@@ -1,286 +1,165 @@
-/* -------------------------- reset da pagina -------------------------------------*/
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/*Atributo para rolagem suave (n funcionou)*/
 html {
   scroll-behavior: smooth;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
 }
 
-/* -------------------------------- :root ------------------------------------------*/
 :root {
   --cor-padrao-nu: rgb(130, 10, 209);
-
   --cor-white: rgb(255, 251, 251);
-
   --cor-black: rgb(0, 0, 0);
-
   --cor-black-s: rgb(22, 21, 21);
 }
 
-/* ----------------------- Área do header e da nav -------------------------------- */
-
 header {
-  background-color: var(--cor-white);
-  border-bottom: 0.4px solid #ebe6e6;
-}
-
-header nav {
   width: 100%;
-  height: 4.375rem;
   display: flex;
   align-items: center;
-  position: fixed;
   background-color: var(--cor-white);
   border-bottom: 0.4px solid #ebe6e6;
 }
 
-header div img {
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header button {
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 20px;
+  cursor: pointer;
+  background: none;
+}
+
+.logo {
   width: 60px;
   height: 50px;
   margin-left: 2.7rem;
   margin-right: 1.4rem;
 }
-/* ----------------------- Config dos botoes do nav ------------------------------ */
 
-.buttons a {
-  margin: 10px;
-  text-decoration: none;
-  color: var(--cor-black);
-  font-size: 1.125rem;
-  letter-spacing: 0.7px;
-}
-
-/* ------------------------------ Main/Sections -------------------------------------*/
-
-main article section:first-child {
+.apresentacao {
   background-image: url(img/inicio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  object-fit: contain;
   color: var(--cor-white);
-  height: 30vh;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 100px 00px 160px 00px;
 }
 
-main article section h1 {
-  font-size: 4rem;
-  color: var(--cor-padrao-nu);
-  margin-left: 4rem;
+.apresentacao h1,h2{
+  margin-left: 40px;
+  margin-top: 20px;
 }
 
-main article section div {
-  font-size: 2.7rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  margin-left: 4rem;
-  text-indent: 2rem;
-  font-weight: bold;
+.trabalhe-conosco {
+  padding: 40px 40px 100px 40px;
 }
 
-/* --------------------------- Config de cada sessão ---------------------------------- */
-
-#sobreNos,
-#trabalheConosco,
-#boasvindas,
-#contato {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-/*margin colocada devido a position: fixed do nav*/
-#boasvindas {
-  margin-top: 4rem;
-}
-
-#boasvindas h1,
-#boasvindas h2 {
-  margin-left: 4rem;
-  margin-right: 4rem;
-}
-
-#sobreNos,
-#trabalheConosco,
-#boasvindas {
-  border-bottom: 0.4px solid #ebe6e6;
-}
-
-#boasvindas h1 {
-  font-size: 2.5rem;
-  color: var(--cor-white);
-  margin-left: 6rem;
-  text-indent: 0;
-}
-
-#boasvindas h2 {
-  font-size: 2rem;
-  margin-left: 6rem;
-  text-indent: 0;
-  margin-bottom: 1rem;
-}
-
-#trabalheConosco img {
-  width: 450px;
+.trabalhe-conosco img {
+  max-width: 450px;
+  width: 100%;
   border-radius: 10%;
-  opacity: 95%;
+  object-fit: contain;
 }
 
-#trabalheConosco div {
-  display: flex;
+.trabalhe-conosco h1 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
 }
 
-#trabalheConosco p {
-  margin-right: 2rem;
+.trabalhe-conosco p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 20px;
+  max-width: 450px;
+  width: 100%;
 }
 
-#sobreNos {
-  background-image: url(img/section3.jpg);
-}
-
-/* --------------------------- Config sessão contatos ---------------------------------- */
-
-#contato {
-  padding-top: 0;
-}
-
-#contato .headerContato {
-  background-color: var(--cor-padrao-nu);
-  margin: 0;
-}
-
-#contato .headerContato h1 {
-  color: var(--cor-white);
-  font-size: 2rem;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-}
-
-.meiosContato {
-  padding-top: 3rem;
+.flex-container {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid #272424;
 }
 
-#contato .meiosContato .campo h1,
-#contato .meiosContato .campo {
-  color: var(--cor-black);
-  text-indent: 0;
-  margin-left: 0;
-}
-
-#contato .meiosContato .campo h1 {
-  font-size: 2rem;
-}
-
-#contato .meiosContato .campo p {
-  font-size: 1.2rem;
-  font-weight: normal;
-  letter-spacing: 0.2px;
-}
-
-#contato .meiosContato .campo a {
-  font-size: 1.2rem;
-}
-
-/* --------------------------- Footer---------------------------------- */
-
-footer {
-  display: flex;
-  background-color: var(--cor-black-s);
-  padding-top: 0;
-  margin-top: 0;
-  height: 25vh;
-  align-items: center;
-}
-
-svg {
-  width: 60px;
-  height: 50px;
-  margin-left: 4rem;
-  margin-right: 3rem;
-  fill: var(--cor-white);
-}
-
-footer p {
+.sobre-nos {
+  background-image: url(img/section3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  object-fit: contain;
+  padding: 150px 0px 400px 0px;
   color: var(--cor-white);
-  font-weight: bold;
 }
 
-/* --------------------------- @media---------------------------------- */
-
-@media (max-width: 1100px) {
-  #trabalheConosco div {
-    flex-direction: column;
-    justify-content: center;
-  }
-  #trabalheConosco div img {
-    width: 60vw;
-    margin: auto;
-  }
+.sobre-nos h1{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  margin-left: 40px;
 }
 
-@media (max-width: 950px) {
-  .meiosContato {
-    flex-direction: column;
-  }
-
-  .meiosContato .campo {
-    padding-top: 1rem;
-  }
-
-  footer {
-    flex-direction: column;
-    justify-content: center;
-    height: 20vh;
-  }
+.sobre-nos p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 20px;
+  max-width: 450px;
+  width: 100%;
+  margin-left: 40px;
 }
 
-@media (max-width: 550px) {
-  #trabalheConosco div img {
-    display: none;
-  }
+.mensagem h1{
+  background: var(--cor-padrao-nu);
+  padding: 40px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--cor-white);
+}
 
-  main article section h1 {
-    text-align: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+.contato{
+  padding: 40px 40px 60px 40px;
+}
 
-  header nav {
-    display: flex;
-    flex-direction: column;
-    height: 5.5rem;
-  }
+.contato ul{
+  list-style: none;
+}
 
-  #boasvindas {
-    margin-top: 5.5rem;
-    height: 20rem;
-  }
-  #boasvindas h1 {
-    font-size: 1.8rem;
-  }
-  #boasvindas h2 {
-    font-size: 1.2rem;
-  }
+.campo {
+  margin-top: 20px;
+}
 
-  main article section div {
-    font-size: 1.8rem;
-  }
+.campo h1{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+}
 
-  main article section h1 {
-    font-size: 3rem;
-  }
+.campo p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
 
-  @media (max-width: 455px) {
-    header nav {
-      font-size: 1px;
-      text-align: center;
-    }
-  }
+.campo a{
+  text-decoration: none;
+}
+
+footer{
+  padding: 40px;
+  text-align: center;
+  background: black;
+  color: white;
 }
