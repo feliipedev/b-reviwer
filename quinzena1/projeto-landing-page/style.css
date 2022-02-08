@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+}
+
+:root {
+  --cor-padrao-nu: rgb(130, 10, 209);
+  --cor-white: rgb(255, 251, 251);
+  --cor-black: rgb(0, 0, 0);
+  --cor-black-s: rgb(22, 21, 21);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-white);
+  border-bottom: 0.4px solid #ebe6e6;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header button {
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 20px;
+  cursor: pointer;
+  background: none;
+}
+
+.logo {
+  width: 60px;
+  height: 50px;
+  margin-left: 2.7rem;
+  margin-right: 1.4rem;
+}
+
+.apresentacao {
+  background-image: url(img/inicio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  object-fit: contain;
+  color: var(--cor-white);
+  padding: 100px 00px 160px 00px;
+}
+
+.apresentacao h1,h2{
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.trabalhe-conosco {
+  padding: 40px 40px 100px 40px;
+}
+
+.trabalhe-conosco img {
+  max-width: 450px;
+  width: 100%;
+  border-radius: 10%;
+  object-fit: contain;
+}
+
+.trabalhe-conosco h1 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.trabalhe-conosco p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 20px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sobre-nos {
+  background-image: url(img/section3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  object-fit: contain;
+  padding: 150px 0px 400px 0px;
+  color: var(--cor-white);
+}
+
+.sobre-nos h1{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  margin-left: 40px;
+}
+
+.sobre-nos p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 20px;
+  max-width: 450px;
+  width: 100%;
+  margin-left: 40px;
+}
+
+.mensagem h1{
+  background: var(--cor-padrao-nu);
+  padding: 40px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--cor-white);
+}
+
+.contato{
+  padding: 40px 40px 60px 40px;
+}
+
+.contato ul{
+  list-style: none;
+}
+
+.campo {
+  margin-top: 20px;
+}
+
+.campo h1{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.campo p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.campo a{
+  text-decoration: none;
+}
+
+footer{
+  padding: 40px;
+  text-align: center;
+  background: black;
+  color: white;
+}
